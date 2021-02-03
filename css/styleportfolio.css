@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-header{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{   
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+
+/* Start for Navigation Bar */
+
+.navbar{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .03rem;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    opacity: 0.8;
+    padding: 20px 0;
+    z-index: -1;
+}
+.navbar .navbar-brand{
+    padding-left: 30px;
+    z-index: 1;
+} 
+
+.navbar-dark .navbar-collapse .navbar-nav .nav-link{
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.navbar-dark .navbar-collapse .navbar-nav .nav-link.active,
+.navbar-dark .navbar-collapse .navbar-nav .nav-link:hover{
+    color: crimson;
+    
+}
+
+
+/* End For the Navigation Bar */
+
+/* Start For Hero section */
+
+#hero{
+    background-image: url(../img/lion.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    
+
+}
+
+#hero::after {
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+      
+}
+
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+
+}
+#hero h1:nth-child(1){
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(2){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 2.5s;
+}
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color:transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: 1s ease;
+    transition-property: background-color, color;
+    text-decoration: none;
+}
+
+#hero .cta:hover{
+    color: white;
+    background-color: crimson;
+    text-decoration: none;
+}
+/* End For Hero section */
+
+/* Key Frames */
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    } 
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: crimson;
+    }
+}    
+/* End Key Frames */
+
+#about-me .btn{
+    border: 2px solid transparent;
+    width: 40%;
+    padding: 15px 22px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: black;
+    
+}
+
+#about-me .btn a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+#about-me .btn:hover{
+    border: 2px solid crimson;
+    cursor: pointer;
+
+}
+
+#service .button{
+    border: 2px solid transparent;
+    width: 40%;
+    padding: 15px 22px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: black;
+}
+
+#service .button a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#service .button:hover{
+    border: 2px solid crimson;
+    cursor: pointer;
+}
+
+.secnews{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f8fafb;
+}
+
+.secnews h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 50px;
+
+}
+
+.secnews p{
+    
+    
+    letter-spacing: 3px;
+    line-height: 50px;
+
+}
+/* Contact me  */
+
+#contact .form-group label{
+    font-size: 1.5rem;
+}
+/* End For Contact me */
+
+/* Page Footer */
+.page-footer{
+    background: #f8fafb;
+}
+#foot-address .fas{
+    text-align: center;
+}
+
